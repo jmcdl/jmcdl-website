@@ -9,8 +9,10 @@ $large-screen: 1024px;
 $tablet-screen: 768px;
 $small-screen: 640px;
 
+$font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
+
 .font-base {
-  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-family: $font-family;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5em;
@@ -138,7 +140,7 @@ $small-screen: 640px;
 }
 .title-text {
   font-size: 45px;
-  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-family: $font-family;
   font-weight: 900;
   color: $black;
   line-height: 1.1;
@@ -163,7 +165,7 @@ $small-screen: 640px;
 .subtitle-text {
   font-size: 16px;
   border-top: 4px solid;
-  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-family: $font-family;
   font-weight: 300;
   color: $black;
   letter-spacing: 0.1rem;
