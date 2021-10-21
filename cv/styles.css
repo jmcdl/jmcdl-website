@@ -1,0 +1,87 @@
+.font-base, .navbar {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #222;
+}
+
+.link-style {
+  text-decoration: none;
+  color: #222;
+  position: relative;
+  display: inline-block;
+}
+.link-style:before {
+  content: "";
+  position: absolute;
+  bottom: 0.2em;
+  width: 100%;
+  height: 2px;
+  background: #74e2ff;
+  z-index: -1;
+}
+.link-style:hover:before {
+  background: #fa8072;
+}
+
+.content-container, .navbar-content {
+  width: 80%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  color: #fff;
+  background-color: #111;
+  text-transform: uppercase;
+  line-height: 3rem;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-buttons {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-button-link {
+  text-decoration: none;
+  padding: 0 0.8rem;
+  color: #fff;
+}
+.nav-button-link:hover {
+  color: #74e2ff;
+}
+
+.download-button {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #24a3cc;
+}
+.download-button:hover {
+  background-color: #fa8072;
+}
+@media (min-width: 1024px) {
+  .download-button {
+    display: flex;
+  }
+}
+
+.download-button-link {
+  text-decoration: none;
+  padding: 0 0.8rem;
+  color: #fff;
+}
+
+/*# sourceMappingURL=styles.css.map */

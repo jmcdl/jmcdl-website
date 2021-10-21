@@ -1,0 +1,99 @@
+$primary: #74e2ff;
+$primary-dark: #24a3cc;
+$secondary: #fa8072;
+$white: #fff;
+$black: #111;
+$text-dark: #222;
+$gray: #ddd;
+$large-screen: 1024px;
+$tablet-screen: 768px;
+$small-screen: 640px;
+
+.font-base {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: $text-dark;
+}
+
+.link-style {
+  text-decoration: none;
+  color: $text-dark;
+  position: relative;
+  display: inline-block;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0.2em;
+    width: 100%;
+    height: 2px;
+    background: $primary;
+    z-index: -1;
+  }
+  &:hover {
+    &:before {
+      background: $secondary;
+    }
+  }
+}
+
+.content-container {
+  width: 80%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// cv navbar styles
+.navbar {
+    color: $white;
+    background-color: $black;
+    text-transform: uppercase;
+    @extend .font-base;
+    line-height: 3rem;
+    font-size: 12px;
+    letter-spacing: 0.1rem;
+}
+
+.navbar-content {
+  @extend .content-container;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-buttons {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-button-link {
+  text-decoration: none;
+  padding: 0 0.8rem;
+  color: $white;
+  &:hover {
+    color: $primary;
+  };
+}
+
+.download-button {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: $primary-dark;
+  &:hover {
+    background-color: $secondary;
+  };
+  @media (min-width: $large-screen) {
+    display: flex;
+  };
+}
+
+.download-button-link {
+  text-decoration: none;
+  padding: 0 0.8rem;
+  color: $white;
+}
