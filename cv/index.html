@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/boilerplate.css" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
     <nav class="navbar">
@@ -77,11 +77,9 @@
           <li>0437 44 00 75</li>
         </ul>
       </div>
-      <div class="section-container">
-        <div class="section-title-column">
-          <h3 class="section-title-text">Profile</h3>
-        </div>
-        <div class="section-content-column">
+      <section-component>
+        <span slot="section-title">Profile</span>
+        <div slot="section-content">
           <p>
             I am a software developer with experience in front-end and back-end
             development for ecommerce websites and applications.
@@ -98,19 +96,15 @@
             priorities.
           </p>
         </div>
-      </div>
-      <div class="section-container">
-        <div class="section-title-column">
-          <h3 class="section-title-text">Skills</h3>
-        </div>
-        <div class="section-content-column">
+      </section-component>
+      <section-component>
+        <span slot="section-title">Skills</span>
+        <div slot="section-content">
           <ul class="section-list">
             <li>
-              Writing performant{" "}
-              <strong class="strong-text">HTML</strong> and{" "}
+              Writing performant <strong class="strong-text">HTML</strong> and
               <strong class="strong-text">CSS</strong> using best practice tools
-              and methodologies (eg.{" "}
-              <strong class="strong-text strong-link">
+              and methodologies (eg. <strong class="strong-text strong-link">
                 <a
                   class="u-link-strong"
                   href="http://getbem.com/introduction/"
@@ -348,31 +342,25 @@
             </li>
           </ul>
         </div>
-      </div>
-      <div class="section-container">
-        <div class="section-title-column">
-          <h3 class="section-title-text">{props.title}</h3>
-        </div>
-        <div class="section-content-column">{props.children}</div>
-      </div>
-      <div class="section-container">
-        <div class="section-title-column">
-          <h3 class="section-title-text">{props.title}</h3>
-        </div>
-        <div class="section-content-column">{props.children}</div>
-      </div>
-      <div class="section-container">
-        <div class="section-title-column">
-          <h3 class="section-title-text">{props.title}</h3>
-        </div>
-        <div class="section-content-column">{props.children}</div>
-      </div>
-      <div class="section-container">
-        <div class="section-title-column">
-          <h3 class="section-title-text">{props.title}</h3>
-        </div>
-        <div class="section-content-column">{props.children}</div>
-      </div>
+      </section-component>
     </div>
+
+      <!-- web components -->
+      <template id="section-template">
+        <style>
+          @import url("./styles/section-template.css");
+        </style>
+        <div class="section-container">
+          <div class="section-title-column">
+            <h3 class="section-title-text">
+              <slot name="section-title">Title</slot>
+            </h3>
+          </div>
+          <div class="section-content-column">
+            <slot name="section-content"> no content </slot>
+          </div>
+        </div>
+      </template>
+    <script src="./components/section-component.js"></script>
   </body>
 </html>

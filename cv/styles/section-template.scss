@@ -1,0 +1,39 @@
+@use "shared" as s;
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+  border-bottom: 1px solid s.$gray;
+  @media (min-width: s.$small-screen) {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 64px;
+  }
+}
+
+.section-content-column {
+  @include s.font-base;
+  flex: 1;
+  @media (min-width: s.$small-screen) {
+    flex: 4;
+  }
+}
+
+.section-title-column {
+  flex: 1;
+  @media (min-width: s.$small-screen) {
+    flex-direction: row;
+    width: 100%
+  }
+}
+.section-title-text {
+  @include s.font-base;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.section-subheading {
+  margin: 0;
+}

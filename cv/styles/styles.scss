@@ -1,27 +1,8 @@
-$primary: #74e2ff;
-$primary-dark: #24a3cc;
-$secondary: #fa8072;
-$white: #fff;
-$black: #111;
-$text-dark: #222;
-$gray: #ddd;
-$large-screen: 1024px;
-$tablet-screen: 768px;
-$small-screen: 640px;
-
-$font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
-
-.font-base {
-  font-family: $font-family;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5em;
-  color: $text-dark;
-}
+@use "shared" as s;
 
 .link-style {
   text-decoration: none;
-  color: $text-dark;
+  color: s.$text-dark;
   position: relative;
   display: inline-block;
   &:before {
@@ -30,12 +11,12 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
     bottom: 0.2em;
     width: 100%;
     height: 2px;
-    background: $primary;
+    background: s.$primary;
     z-index: -1;
   }
   &:hover {
     &:before {
-      background: $secondary;
+      background: s.$secondary;
     }
   }
 }
@@ -49,10 +30,10 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 
 // cv navbar styles;
 .navbar {
-    color: $white;
-    background-color: $black;
+    color: s.$white;
+    background-color: s.$black;
     text-transform: uppercase;
-    @extend .font-base;
+    @include s.font-base;
     line-height: 3rem;
     font-size: 12px;
     letter-spacing: 0.1rem;
@@ -74,9 +55,9 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 .nav-button-link {
   text-decoration: none;
   padding: 0 0.8rem;
-  color: $white;
+  color: s.$white;
   &:hover {
-    color: $primary;
+    color: s.$primary;
   };
 }
 
@@ -85,11 +66,11 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: $primary-dark;
+  background-color: s.$primary-dark;
   &:hover {
-    background-color: $secondary;
+    background-color: s.$secondary;
   };
-  @media (min-width: $large-screen) {
+  @media (min-width: s.$large-screen) {
     display: flex;
   };
 }
@@ -97,7 +78,7 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 .download-button-link {
   text-decoration: none;
   padding: 0 0.8rem;
-  color: $white;
+  color: s.$white;
 }
 
 // cv header styles;
@@ -107,7 +88,7 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
     width: 250px;
     display: flex;
     flex-direction: column;
-    @media (min-width: $small-screen) {
+    @media (min-width: s.$small-screen) {
       flex-direction: row;
       width: 100%;
       margin-bottom: 32px;
@@ -120,7 +101,7 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 .info-column {
-  @extend .font-base;
+  @include s.font-base;
   font-size: 14px;
   flex: 5;
   display: flex;
@@ -131,33 +112,33 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
   margin-top: 32px;
   margin-bottom: 16px;
   padding: 0;
-  @media (min-width: $small-screen) {
+  @media (min-width: s.$small-screen) {
     text-align: right;
   }
-  @media (min-width: $tablet-screen) {
+  @media (min-width: s.$tablet-screen) {
     font-size: 16px;
   }
 }
 .title-text {
   font-size: 45px;
-  font-family: $font-family;
+  font-family: s.$font-family;
   font-weight: 900;
-  color: $black;
+  color: s.$black;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0;
   text-transform: uppercase;
   display: flex;
   flex-wrap: wrap;
-  text-shadow: 4px 4px 0 $primary;
+  text-shadow: 4px 4px 0 s.$primary;
   transition: text-shadow .2s ease-in-out;
   &:hover {
-    text-shadow: -4px -4px 0 $secondary;
+    text-shadow: -4px -4px 0 s.$secondary;
   }
-  @media (min-width: $tablet-screen) {
+  @media (min-width: s.$tablet-screen) {
     font-size: 58px;
   }
-  @media (min-width: $large-screen) {
+  @media (min-width: s.$large-screen) {
     font-size: 75px;
   }
 }
@@ -165,21 +146,21 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 .subtitle-text {
   font-size: 16px;
   border-top: 4px solid;
-  font-family: $font-family;
+  font-family: s.$font-family;
   font-weight: 300;
-  color: $black;
+  color: s.$black;
   letter-spacing: 0.1rem;
   margin-top: 16px;
   margin-bottom: 8px;
   padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
-  @media (min-width: $tablet-screen) {
+  @media (min-width: s.$tablet-screen) {
     border-top: 6px solid;
     font-size: 26px;
     font-weight: 400;
   }
-  @media (min-width: $large-screen) {
+  @media (min-width: s.$large-screen) {
     font-size: 32px;
     border-top: 8px solid;
   }
@@ -190,38 +171,38 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 // cv sections styles;
-.section-container {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 32px;
-  border-bottom: 1px solid $gray;
-  @media (min-width: $small-screen) {
-    flex-direction: row;
-    width: 100%;
-    margin-top: 64px;
-  }
-}
-.section-title-column {
-  flex: 1;
-  @media (min-width: $small-screen) {
-    flex-direction: row;
-    width: 100%
-  }
-}
-.section-title-text {
-  @extend .font-base;
-  font-size: 20px;
-  font-weight: 900;
-  margin-bottom: 0;
-  margin-top: 20px;
-}
-.section-subheading {
-  margin: 0;
-}
+//.section-container {
+//  display: flex;
+//  flex-direction: column;
+//  padding-bottom: 32px;
+//  border-bottom: 1px solid s.$gray;
+//  @media (min-width: s.$small-screen) {
+//    flex-direction: row;
+//    width: 100%;
+//    margin-top: 64px;
+//  }
+//}
+//.section-title-column {
+//  flex: 1;
+//  @media (min-width: s.$small-screen) {
+//    flex-direction: row;
+//    width: 100%
+//  }
+//}
+//.section-title-text {
+//  @include s.font-base;
+//  font-size: 20px;
+//  font-weight: 900;
+//  margin-bottom: 0;
+//  margin-top: 20px;
+//}
+//.section-subheading {
+//  margin: 0;
+//}
 .section-content-column {
-  @extend .font-base;
+  @include s.font-base;
   flex: 1;
-  @media (min-width: $small-screen) {
+  @media (min-width: s.$small-screen) {
     flex: 4;
   }
 }
@@ -229,7 +210,7 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
   padding-left: 18px;
 }
 .strong-text {
-  color: $black;
+  color: s.$black;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, .4);
   font-weight: 700;
   line-height: 1;
@@ -239,7 +220,7 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
   padding-right: .8rem;
   & a {
     text-decoration: none;
-    color: $text-dark;
+    color: s.$text-dark;
   }
   &:before {
     content: "";
@@ -251,13 +232,13 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
     bottom: 0;
     margin: auto;
     border-radius: .2rem;
-    background-color: $primary;
+    background-color: s.$primary;
     transition: all .8s .4s ease-in-out;
   }
   &:hover {
     &:before {
       transform: scale(1.05 1.4);
-      background-color: $primary;
+      background-color: s.$primary;
       transition-delay: 0s;
       transition-duration: .2s;
     }
@@ -267,7 +248,7 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 .strong-link {
   &:hover {
     &:before {
-      background-color: $secondary;
+      background-color: s.$secondary;
     }
   }
 }
@@ -277,7 +258,7 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 .project-heading {
-  @extend .font-base;
+  @include s.font-base;
   font-size: 18px;
   font-weight: 900;
   margin-bottom: 0;
@@ -286,7 +267,7 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 
 // cv footer styles;
 .footer {
-  @extend .font-base;
+  @include s.font-base;
   font-size: 14px;
 }
 .footer-content {
