@@ -12,11 +12,31 @@ $large-screen: 1024px;
 $tablet-screen: 768px;
 $small-screen: 640px;
 
+@font-face {
+  font-family: Lato;
+  src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url("/fonts/Lato/Lato-Bold.ttf") format("truetype");
+}
+
 // font
-$font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
+$font-regular: Lato, sans-serif;
+$font-bold: "Lato Bold", sans-serif;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $black;
+}
 
 .font-base {
-  font-family: $font-family;
+  font-family: $font-regular;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5em;
@@ -53,13 +73,13 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 
 // cv navbar styles;
 .navbar {
-    color: $white;
-    background-color: $black;
-    text-transform: uppercase;
-    @extend .font-base;
-    line-height: 3rem;
-    font-size: 12px;
-    letter-spacing: 0.1rem;
+  color: $white;
+  background-color: $black;
+  text-transform: uppercase;
+  @extend .font-base;
+  line-height: 3rem;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
 }
 
 .navbar-content {
@@ -75,13 +95,23 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
   padding: 0;
 }
 
-.nav-button-link {
-  text-decoration: none;
-  padding: 0 0.8rem;
+.nav-button {
   color: $white;
+  padding: 0 0.8rem;
+  text-decoration: none;
   &:hover {
-    color: $primary;
-  };
+    background-color: $primary;
+    color: $black;
+    > a {
+      background-color: $primary;
+      color: $black;
+    }
+  }
+}
+
+.nav-button-link {
+  color: $white;
+  text-decoration: none;
 }
 
 .download-button {
@@ -92,10 +122,10 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
   background-color: $primary-dark;
   &:hover {
     background-color: $secondary;
-  };
+  }
   @media (min-width: $large-screen) {
     display: flex;
-  };
+  }
 }
 
 .download-button-link {
@@ -104,20 +134,25 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
   color: $white;
 }
 
-// cv header styles;
-
 .title-container {
-    margin-top: 64px;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    @media (min-width: $small-screen) {
-      flex-direction: row;
-      width: 100%;
-      margin-bottom: 32px;
-    }
+  margin-top: 240px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $small-screen) {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 32px;
   }
+}
 
+// home title styles
+.cv--title-container {
+  @extend .title-container;
+  margin-top: 64px;
+}
+
+// cv title styles;
 .title-column {
   flex: 1;
   justify-content: flex-end;
@@ -125,6 +160,7 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 
 .info-column {
   @extend .font-base;
+  color: lightcoral;
   font-size: 14px;
   flex: 5;
   display: flex;
@@ -144,19 +180,20 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 }
 .title-text {
   font-size: 45px;
-  font-family: $font-family;
+  font-family: "Lato Bold", sans-serif;
   font-weight: 900;
-  color: $black;
+  color: lightcoral;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0;
   text-transform: uppercase;
   display: flex;
   flex-wrap: wrap;
-  text-shadow: 4px 4px 0 $primary;
-  transition: text-shadow .2s ease-in-out;
+  //text-shadow: 4px 4px 0 $secondary;
+  //transition: text-shadow 0.2s ease-in-out;
   &:hover {
-    text-shadow: -4px -4px 0 $secondary;
+    text-shadow: -4px -4px 0 lightcoral;
+    color: $black;
   }
   @media (min-width: $tablet-screen) {
     font-size: 58px;
@@ -169,7 +206,7 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 .subtitle-text {
   font-size: 16px;
   border-top: 4px solid;
-  font-family: $font-family;
+  font-family: $font-regular;
   font-weight: 300;
   color: $black;
   letter-spacing: 0.1rem;
@@ -193,7 +230,7 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
   @extend .link-style;
 }
 
- //cv sections styles
+//cv sections styles
 .section-container {
   display: flex;
   flex-direction: column;
@@ -209,7 +246,7 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
   flex: 1;
   @media (min-width: $small-screen) {
     flex-direction: row;
-    width: 100%
+    width: 100%;
   }
 }
 .section-title-text {
@@ -234,13 +271,13 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
 }
 .strong-text {
   color: $black;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, .4);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   font-weight: 700;
   line-height: 1;
   position: relative;
   display: inline-block;
-  padding-left: .8rem;
-  padding-right: .8rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
   & a {
     text-decoration: none;
     color: $text-dark;
@@ -254,16 +291,16 @@ $font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
     right: 0;
     bottom: 0;
     margin: auto;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     background-color: $primary;
-    transition: all .8s .4s ease-in-out;
+    transition: all 0.8s 0.4s ease-in-out;
   }
   &:hover {
     &:before {
       transform: scale(1.05 1.4);
       background-color: $primary;
       transition-delay: 0s;
-      transition-duration: .2s;
+      transition-duration: 0.2s;
     }
   }
 }

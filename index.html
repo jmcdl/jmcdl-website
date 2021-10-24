@@ -5,6 +5,7 @@
     <title></title>
     <meta name="description" content="The personal website James McDonell" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fafafa" />
 
     <!--  <meta property="og:title" content="">-->
     <!--  <meta property="og:type" content="">-->
@@ -13,29 +14,52 @@
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/boilerplate.css" />
-    <link rel="stylesheet" href="css/main.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Gowun+Batang&display=swap"
-      rel="stylesheet"
-    />
-
-    <meta name="theme-color" content="#fafafa" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
-    <div class="header--wrapper">
-      <h2 class="header--title">jmcdl.com</h2>
-      <nav class="header--nav_container">
-        <ul class="header--nav_list">
-          <li class="header--nav_item"><a>blog</a></li>
-          <li class="header--nav_item"><a href="cv/index.html">cv</a></li>
+    <nav class="navbar">
+      <div class="navbar-content">
+        <a href="/" class="nav-button"> home </a>
+        <div class="nav-buttons">
+            <a
+              class="nav-button"
+              href="https://www.linkedin.com/in/james-mcdonell-7bab8049/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a
+              class="nav-button"
+              href="https://github.com/jmcdl/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+            <a
+              class="nav-button"
+              href="https://twitter.com/jmcdl_dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </a>
+        </div>
+      </div>
+    </nav>
+    <div class="content-container">
+      <div class="title-container">
+        <div class="title-column">
+          <h1 class="title-text">James McDonell</h1>
+<!--          <h2 class="subtitle-text">Web Developer</h2>-->
+        </div>
+        <ul class="info-column">
+          <li>I Make things on the internet and do some other things too.</li>
         </ul>
-      </nav>
+      </div>
     </div>
-    <p>Hello world! This is HTML5 Boilerplate.</p>
     <script src="js/main.js"></script>
   </body>
 </html>
