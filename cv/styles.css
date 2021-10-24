@@ -1,3 +1,11 @@
+.font-base, .footer, .project-heading, .section-content-column, .section-title-text, .info-column, .navbar {
+  font-family: Lato, "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #222;
+}
+
 .link-style, .list-item-link {
   text-decoration: none;
   color: #222;
@@ -28,11 +36,6 @@
   color: #fff;
   background-color: #111;
   text-transform: uppercase;
-  font-family: Lato, "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5em;
-  color: #222;
   line-height: 3rem;
   font-size: 12px;
   letter-spacing: 0.1rem;
@@ -101,11 +104,6 @@
 }
 
 .info-column {
-  font-family: Lato, "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5em;
-  color: #222;
   font-size: 14px;
   flex: 5;
   display: flex;
@@ -183,12 +181,42 @@
   }
 }
 
+.section-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #ddd;
+}
+@media (min-width: 640px) {
+  .section-container {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 64px;
+  }
+}
+
+.section-title-column {
+  flex: 1;
+}
+@media (min-width: 640px) {
+  .section-title-column {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+.section-title-text {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.section-subheading {
+  margin: 0;
+}
+
 .section-content-column {
-  font-family: Lato, "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5em;
-  color: #222;
   flex: 1;
 }
 @media (min-width: 640px) {
@@ -240,11 +268,6 @@
 }
 
 .project-heading {
-  font-family: Lato, "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5em;
-  color: #222;
   font-size: 18px;
   font-weight: 900;
   margin-bottom: 0;
@@ -252,11 +275,6 @@
 }
 
 .footer {
-  font-family: Lato, "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5em;
-  color: #222;
   font-size: 14px;
 }
 

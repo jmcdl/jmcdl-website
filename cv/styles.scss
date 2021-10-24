@@ -1,8 +1,31 @@
-@use "shared" as s;
+// colors
+$primary: #74e2ff;
+$primary-dark: #24a3cc;
+$secondary: #fa8072;
+$white: #fff;
+$black: #111;
+$text-dark: #222;
+$gray: #ddd;
+
+// breakpoints
+$large-screen: 1024px;
+$tablet-screen: 768px;
+$small-screen: 640px;
+
+// font
+$font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
+
+.font-base {
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: $text-dark;
+}
 
 .link-style {
   text-decoration: none;
-  color: s.$text-dark;
+  color: $text-dark;
   position: relative;
   display: inline-block;
   &:before {
@@ -11,12 +34,12 @@
     bottom: 0.2em;
     width: 100%;
     height: 2px;
-    background: s.$primary;
+    background: $primary;
     z-index: -1;
   }
   &:hover {
     &:before {
-      background: s.$secondary;
+      background: $secondary;
     }
   }
 }
@@ -30,10 +53,10 @@
 
 // cv navbar styles;
 .navbar {
-    color: s.$white;
-    background-color: s.$black;
+    color: $white;
+    background-color: $black;
     text-transform: uppercase;
-    @include s.font-base;
+    @extend .font-base;
     line-height: 3rem;
     font-size: 12px;
     letter-spacing: 0.1rem;
@@ -55,9 +78,9 @@
 .nav-button-link {
   text-decoration: none;
   padding: 0 0.8rem;
-  color: s.$white;
+  color: $white;
   &:hover {
-    color: s.$primary;
+    color: $primary;
   };
 }
 
@@ -66,11 +89,11 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: s.$primary-dark;
+  background-color: $primary-dark;
   &:hover {
-    background-color: s.$secondary;
+    background-color: $secondary;
   };
-  @media (min-width: s.$large-screen) {
+  @media (min-width: $large-screen) {
     display: flex;
   };
 }
@@ -78,7 +101,7 @@
 .download-button-link {
   text-decoration: none;
   padding: 0 0.8rem;
-  color: s.$white;
+  color: $white;
 }
 
 // cv header styles;
@@ -88,7 +111,7 @@
     width: 250px;
     display: flex;
     flex-direction: column;
-    @media (min-width: s.$small-screen) {
+    @media (min-width: $small-screen) {
       flex-direction: row;
       width: 100%;
       margin-bottom: 32px;
@@ -101,7 +124,7 @@
 }
 
 .info-column {
-  @include s.font-base;
+  @extend .font-base;
   font-size: 14px;
   flex: 5;
   display: flex;
@@ -112,33 +135,33 @@
   margin-top: 32px;
   margin-bottom: 16px;
   padding: 0;
-  @media (min-width: s.$small-screen) {
+  @media (min-width: $small-screen) {
     text-align: right;
   }
-  @media (min-width: s.$tablet-screen) {
+  @media (min-width: $tablet-screen) {
     font-size: 16px;
   }
 }
 .title-text {
   font-size: 45px;
-  font-family: s.$font-family;
+  font-family: $font-family;
   font-weight: 900;
-  color: s.$black;
+  color: $black;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0;
   text-transform: uppercase;
   display: flex;
   flex-wrap: wrap;
-  text-shadow: 4px 4px 0 s.$primary;
+  text-shadow: 4px 4px 0 $primary;
   transition: text-shadow .2s ease-in-out;
   &:hover {
-    text-shadow: -4px -4px 0 s.$secondary;
+    text-shadow: -4px -4px 0 $secondary;
   }
-  @media (min-width: s.$tablet-screen) {
+  @media (min-width: $tablet-screen) {
     font-size: 58px;
   }
-  @media (min-width: s.$large-screen) {
+  @media (min-width: $large-screen) {
     font-size: 75px;
   }
 }
@@ -146,21 +169,21 @@
 .subtitle-text {
   font-size: 16px;
   border-top: 4px solid;
-  font-family: s.$font-family;
+  font-family: $font-family;
   font-weight: 300;
-  color: s.$black;
+  color: $black;
   letter-spacing: 0.1rem;
   margin-top: 16px;
   margin-bottom: 8px;
   padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
-  @media (min-width: s.$tablet-screen) {
+  @media (min-width: $tablet-screen) {
     border-top: 6px solid;
     font-size: 26px;
     font-weight: 400;
   }
-  @media (min-width: s.$large-screen) {
+  @media (min-width: $large-screen) {
     font-size: 32px;
     border-top: 8px solid;
   }
@@ -170,39 +193,39 @@
   @extend .link-style;
 }
 
-// cv sections styles;
-//.section-container {
-//  display: flex;
-//  flex-direction: column;
-//  padding-bottom: 32px;
-//  border-bottom: 1px solid s.$gray;
-//  @media (min-width: s.$small-screen) {
-//    flex-direction: row;
-//    width: 100%;
-//    margin-top: 64px;
-//  }
-//}
-//.section-title-column {
-//  flex: 1;
-//  @media (min-width: s.$small-screen) {
-//    flex-direction: row;
-//    width: 100%
-//  }
-//}
-//.section-title-text {
-//  @include s.font-base;
-//  font-size: 20px;
-//  font-weight: 900;
-//  margin-bottom: 0;
-//  margin-top: 20px;
-//}
-//.section-subheading {
-//  margin: 0;
-//}
-.section-content-column {
-  @include s.font-base;
+ //cv sections styles
+.section-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+  border-bottom: 1px solid $gray;
+  @media (min-width: $small-screen) {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 64px;
+  }
+}
+.section-title-column {
   flex: 1;
-  @media (min-width: s.$small-screen) {
+  @media (min-width: $small-screen) {
+    flex-direction: row;
+    width: 100%
+  }
+}
+.section-title-text {
+  @extend .font-base;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.section-subheading {
+  margin: 0;
+}
+.section-content-column {
+  @extend .font-base;
+  flex: 1;
+  @media (min-width: $small-screen) {
     flex: 4;
   }
 }
@@ -210,7 +233,7 @@
   padding-left: 18px;
 }
 .strong-text {
-  color: s.$black;
+  color: $black;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, .4);
   font-weight: 700;
   line-height: 1;
@@ -220,7 +243,7 @@
   padding-right: .8rem;
   & a {
     text-decoration: none;
-    color: s.$text-dark;
+    color: $text-dark;
   }
   &:before {
     content: "";
@@ -232,13 +255,13 @@
     bottom: 0;
     margin: auto;
     border-radius: .2rem;
-    background-color: s.$primary;
+    background-color: $primary;
     transition: all .8s .4s ease-in-out;
   }
   &:hover {
     &:before {
       transform: scale(1.05 1.4);
-      background-color: s.$primary;
+      background-color: $primary;
       transition-delay: 0s;
       transition-duration: .2s;
     }
@@ -248,7 +271,7 @@
 .strong-link {
   &:hover {
     &:before {
-      background-color: s.$secondary;
+      background-color: $secondary;
     }
   }
 }
@@ -258,7 +281,7 @@
 }
 
 .project-heading {
-  @include s.font-base;
+  @extend .font-base;
   font-size: 18px;
   font-weight: 900;
   margin-bottom: 0;
@@ -267,7 +290,7 @@
 
 // cv footer styles;
 .footer {
-  @include s.font-base;
+  @extend .font-base;
   font-size: 14px;
 }
 .footer-content {
