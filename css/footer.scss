@@ -1,0 +1,17 @@
+@use "variables" as v;
+@use "base";
+
+.footer-container {
+  @extend .content-container;
+  border-top: 1px solid v.$primary;
+  height: 50px;
+}
+
+.footer-text {
+  @extend .font-base;
+  font-size: 16px;
+}
+
+.footer-link {
+
+}

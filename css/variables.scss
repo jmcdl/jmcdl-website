@@ -1,0 +1,34 @@
+// colors
+$primary: #6d88a9;
+$primary-light: #9cb9dd;
+$primary-dark: #24a3cc;
+$secondary: #fa8072;
+$white: #fff;
+$black: #111;
+$text-dark: #222;
+$gray: #ddd;
+
+// breakpoints
+$large-screen: 1024px;
+$tablet-screen: 768px;
+$small-screen: 640px;
+
+@font-face {
+  font-family: Lato;
+  src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url("/fonts/Lato/Lato-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato Light";
+  src: url("/fonts/Lato/Lato-light.ttf") format("truetype");
+}
+
+// font
+$font-regular: Lato, sans-serif;
+$font-bold: "Lato Bold", sans-serif;
+$font-light: "Lato Light", sans-serif;
