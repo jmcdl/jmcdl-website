@@ -20,7 +20,7 @@ body {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5em;
-  color: #6d88a9;
+  color: #9cb9dd;
 }
 
 .content-container, .navbar-container {
@@ -43,7 +43,7 @@ body {
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .nav-buttons {
@@ -54,18 +54,18 @@ body {
 }
 
 .nav-button {
-  color: #6d88a9;
+  color: #9cb9dd;
   padding: 0 0.8rem;
   text-decoration: none;
   font-size: 16px;
 }
 .nav-button:hover {
-  background-color: #6d88a9;
+  background-color: #9cb9dd;
   color: #111;
   font-family: "Lato Bold", sans-serif;
 }
 .nav-button:hover > a {
-  background-color: #6d88a9;
+  background-color: #9cb9dd;
   color: #111;
 }
 
@@ -79,7 +79,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #24a3cc;
+  background-color: #6d88a9;
 }
 .download-button:hover {
   background-color: #fa8072;
@@ -108,7 +108,7 @@ body {
   bottom: 0.2em;
   width: 100%;
   height: 2px;
-  background: #6d88a9;
+  background: #9cb9dd;
   z-index: -1;
 }
 .link-style:hover:before, .list-item-link:hover:before {

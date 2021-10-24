@@ -9,11 +9,11 @@ body {
 
 .home-container {
   @extend .content-container;
-  height: calc(100% - 100px);
+  height: calc(100% - 130px);
 }
 
 .title-container {
-  margin-top: 240px;
+  padding-top: 200px;
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -109,7 +109,7 @@ body {
       transition-delay: 0s;
       transition-duration: 0.2s;
       transform: scale(1.02, 1.02);
-      background-color: v.$primary-light;
+      background-color: v.$primary-dark;
     }
   }
 }
