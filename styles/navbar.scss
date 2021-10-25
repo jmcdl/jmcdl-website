@@ -16,6 +16,11 @@
 .navbar-container {
   @extend .content-container;
   display: flex;
+  justify-content: space-between;
+}
+
+.home--navbar-container {
+  @extend .navbar-container;
   justify-content: flex-end;
 }
 

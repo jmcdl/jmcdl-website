@@ -18,12 +18,11 @@ body {
 .font-base, .section-title-text, .section-content-column, .project-heading {
   font-family: "Lato Light", sans-serif;
   font-size: 16px;
-  font-weight: 300;
   line-height: 1.5em;
   color: #9cb9dd;
 }
 
-.content-container, .navbar-container {
+.content-container, .navbar-container, .home--navbar-container {
   width: 80%;
   max-width: 900px;
   margin-left: auto;
@@ -41,8 +40,12 @@ body {
   height: 50px;
 }
 
-.navbar-container {
+.navbar-container, .home--navbar-container {
   display: flex;
+  justify-content: space-between;
+}
+
+.home--navbar-container {
   justify-content: flex-end;
 }
 
