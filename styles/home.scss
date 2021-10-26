@@ -62,9 +62,9 @@ body {
   flex-wrap: wrap;
   text-shadow: -4px -4px 0 v.$primary;
   color: v.$black;
+  transition: all .8s .4s ease-in-out;
   &:hover {
-    text-shadow: none;
-    color: v.$primary;
+    color: v.$white;
   }
   @media (min-width: v.$tablet-screen) {
     font-size: 58px;
