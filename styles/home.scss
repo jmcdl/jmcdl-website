@@ -9,7 +9,7 @@ body {
 
 .home-container {
   @extend .content-container;
-  height: calc(100% - 130px);
+  min-height: calc(100% - 130px);
 }
 
 .title-container {
