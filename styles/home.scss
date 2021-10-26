@@ -170,3 +170,42 @@ body {
 .section-list {
   padding-left: 18px;
 }
+
+// unused
+
+.strong-link {
+  &:hover {
+    &:before {
+      background-color: v.$secondary;
+    }
+  }
+}
+
+.project-heading {
+  @extend .font-base;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.link-style {
+  text-decoration: none;
+  color: v.$text-dark;
+  position: relative;
+  display: inline-block;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0.2em;
+    width: 100%;
+    height: 2px;
+    background: v.$primary;
+    z-index: -1;
+  }
+  &:hover {
+    &:before {
+      background: v.$secondary;
+    }
+  }
+}
