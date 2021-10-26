@@ -15,7 +15,7 @@ body {
   height: 100%;
 }
 
-.font-base, .info-column, .resume-section-title-text, .section-content-column, .project-heading, .footer--text, .footer--title {
+.font-base, .info-column, .resume-section-title-text, .section-content-column, .project-heading, .footnote-text, .footer--text, .footer--title {
   font-family: "Lato Light", sans-serif;
   font-size: 16px;
   line-height: 1.5em;
@@ -141,7 +141,8 @@ body {
 }
 
 .home-container {
-  min-height: calc(100% - 130px);
+  min-height: calc(100% - 190px);
+  counter-reset: footnotes;
 }
 
 .title-container, .resume-title-container {
@@ -342,5 +343,59 @@ body {
 .link-style:hover:before {
   background: #fa8072;
 }
+
+a[aria-describedby=footnote] {
+  counter-increment: footnotes;
+  /* 1 */
+  text-decoration: none;
+  /* 2 */
+  color: #111;
+  /* 2 */
+  cursor: default;
+  /* 2 */
+  outline: none;
+  /* 2 */
+}
+
+/**
+ * Actual numbered references
+ * 1. Display the current state of the counter (e.g. `[1]`)
+ * 2. Align text as superscript
+ * 3. Make the number smaller (since it's superscript)
+ * 4. Slightly offset the number from the text
+ * 5. Reset link styles on the number to show it's usable
+ */
+a[aria-describedby=footnote]::after {
+  content: counter(footnotes);
+  /* 1 */
+  vertical-align: super;
+  /* 2 */
+  font-size: 14px;
+  /* 3 */
+  margin-left: 2px;
+  /* 4 */
+  color: #9cb9dd;
+  /* 5 */
+  cursor: pointer;
+  /* 5 */
+}
+
+#footnote:target {
+  background: yellow;
+}
+
+.footnote-text {
+  font-size: 16px;
+}
+
+[aria-label="Back to content"] {
+  color: #9cb9dd;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/**
+ * Resetting the default focused styles on the number
+ */
 
 /*# sourceMappingURL=home.css.map */

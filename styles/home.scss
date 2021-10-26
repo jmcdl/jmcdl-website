@@ -9,7 +9,8 @@ body {
 
 .home-container {
   @extend .content-container;
-  min-height: calc(100% - 130px);
+  min-height: calc(100% - 190px);
+  counter-reset: footnotes;
 }
 
 .title-container {
@@ -62,7 +63,7 @@ body {
   flex-wrap: wrap;
   text-shadow: -4px -4px 0 v.$primary;
   color: v.$black;
-  transition: all .8s 0s ease-in-out;
+  transition: all 0.8s 0s ease-in-out;
   &:hover {
     color: v.$white;
   }
@@ -209,3 +210,53 @@ body {
     }
   }
 }
+
+a[aria-describedby="footnote"] {
+  counter-increment: footnotes; /* 1 */
+  text-decoration: none; /* 2 */
+  color: v.$black; /* 2 */
+  cursor: default; /* 2 */
+  outline: none; /* 2 */
+}
+
+/**
+ * Actual numbered references
+ * 1. Display the current state of the counter (e.g. `[1]`)
+ * 2. Align text as superscript
+ * 3. Make the number smaller (since it's superscript)
+ * 4. Slightly offset the number from the text
+ * 5. Reset link styles on the number to show it's usable
+ */
+a[aria-describedby="footnote"]::after {
+  content: counter(footnotes); /* 1 */
+  vertical-align: super; /* 2 */
+  font-size: 14px; /* 3 */
+  margin-left: 2px; /* 4 */
+  color: v.$primary; /* 5 */
+  cursor: pointer; /* 5 */
+}
+
+#footnote {
+  &:target {
+    background: yellow;
+  }
+}
+
+.footnote-text {
+  @extend .font-base;
+  font-size: 16px;
+}
+
+[aria-label="Back to content"] {
+  color: v.$primary;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/**
+ * Resetting the default focused styles on the number
+ */
+//a[aria-describedby="footnote"]:focus::after {
+//  outline: thin dotted;
+//  outline-offset: 2px;
+//}
