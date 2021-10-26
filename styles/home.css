@@ -22,7 +22,7 @@ body {
   color: #9cb9dd;
 }
 
-.content-container, .home-container, .resume-container, .footer--container, .navbar-container, .home--navbar-container {
+.content-container, .home-container, .resume-container, .footer-container, .navbar-container, .home--navbar-container {
   width: 80%;
   max-width: 900px;
   margin-left: auto;
@@ -99,14 +99,14 @@ body {
   color: #fff;
 }
 
-.footer--container {
+.footer-container {
   border-top: 1px solid #9cb9dd;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.footer--contact {
+.footer-contact {
   font-size: 2rem;
   color: #9cb9dd;
   display: flex;
@@ -115,10 +115,10 @@ body {
   margin: 20px 0;
 }
 
-.footer--contact-icon {
+.footer-contact-icon {
   color: #9cb9dd;
 }
-.footer--contact-icon:hover {
+.footer-contact-icon:hover {
   color: #6d88a9;
 }
 
@@ -132,7 +132,7 @@ body {
   padding-left: 20px;
 }
 
-.footer--title-bracket {
+.footer-title-bracket {
   color: #9cb9dd;
 }
 
@@ -141,8 +141,11 @@ body {
 }
 
 .home-container {
-  min-height: calc(100% - 190px);
+  min-height: calc(100% - 135px);
   counter-reset: footnotes;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .title-container, .resume-title-container {
@@ -266,7 +269,7 @@ body {
 }
 
 .resume-container {
-  min-height: calc(100% - 130px);
+  min-height: calc(100% - 135px);
 }
 
 .section-container {
@@ -350,38 +353,29 @@ body {
 
 a[aria-describedby=footnote] {
   counter-increment: footnotes;
-  /* 1 */
   text-decoration: none;
-  /* 2 */
   color: #111;
-  /* 2 */
   cursor: default;
-  /* 2 */
   outline: none;
-  /* 2 */
+  /**
+  * Actual numbered references
+  * 1. Display the current state of the counter (e.g. `[1]`)
+  * 2. Align text as superscript
+  * 3. Make the number smaller (since it's superscript)
+  * 4. Slightly offset the number from the text
+  * 5. Reset link styles on the number to show it's usable
+  */
 }
-
-/**
- * Actual numbered references
- * 1. Display the current state of the counter (e.g. `[1]`)
- * 2. Align text as superscript
- * 3. Make the number smaller (since it's superscript)
- * 4. Slightly offset the number from the text
- * 5. Reset link styles on the number to show it's usable
- */
-a[aria-describedby=footnote]::after {
+a[aria-describedby=footnote]:after {
   content: counter(footnotes);
-  /* 1 */
   vertical-align: super;
-  /* 2 */
   font-size: 14px;
-  /* 3 */
   margin-left: 2px;
-  /* 4 */
   color: #9cb9dd;
-  /* 5 */
   cursor: pointer;
-  /* 5 */
+}
+a[aria-describedby=footnote]:hover:after {
+  color: #6d88a9;
 }
 
 #footnote:target {
@@ -390,6 +384,7 @@ a[aria-describedby=footnote]::after {
 
 .footnote-text {
   font-size: 16px;
+  padding-inline-start: 20px;
 }
 
 [aria-label="Back to content"] {
@@ -397,9 +392,5 @@ a[aria-describedby=footnote]::after {
   font-size: 12px;
   margin-left: 4px;
 }
-
-/**
- * Resetting the default focused styles on the number
- */
 
 /*# sourceMappingURL=home.css.map */

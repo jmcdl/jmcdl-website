@@ -1,7 +1,7 @@
 @use "variables" as v;
 @use "base";
 
-.footer--container {
+.footer-container {
   @extend .content-container;
   border-top: 1px solid v.$primary;
   display: flex;
@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.footer--contact {
+.footer-contact {
   font-size: 2rem;
   color: v.$primary;
   display: flex;
@@ -18,7 +18,7 @@
   margin: 20px 0;
 }
 
-.footer--contact-icon {
+.footer-contact-icon {
   color: v.$primary;
   &:hover {
   color: v.$primary-dark;
@@ -40,7 +40,7 @@
   padding-left: 20px;
 }
 
-.footer--title-bracket {
+.footer-title-bracket {
   color: v.$primary;
 }
 

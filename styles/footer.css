@@ -23,7 +23,7 @@ body {
   color: #6d88a9;
 }
 
-.content-container, .footer--container {
+.content-container, .footer-container {
   width: 80%;
   max-width: 900px;
   margin-left: auto;
