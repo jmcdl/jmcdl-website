@@ -265,6 +265,10 @@ body {
   padding-top: 100px;
 }
 
+.resume-container {
+  min-height: calc(100% - 130px);
+}
+
 .section-container {
   display: flex;
   flex-direction: column;

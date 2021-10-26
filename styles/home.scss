@@ -128,7 +128,7 @@ body {
 
 .resume-container {
   @extend .content-container;
-  //max-width: 800px;
+  min-height: calc(100% - 130px);
 }
 
 .section-container {
