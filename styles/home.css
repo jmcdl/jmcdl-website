@@ -1,21 +1,21 @@
 @font-face {
   font-family: Lato;
-  src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lato Bold";
-  src: url("/fonts/Lato/Lato-Bold.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lato Light";
-  src: url("/fonts/Lato/Lato-light.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
 }
 html,
 body {
   height: 100%;
 }
 
-.font-base, .info-column, .resume-section-title-text, .section-content-column, .footer--text, .footer--title {
+.font-base, .info-column, .resume-section-title-text, .section-content-column, .project-heading, .footer--text, .footer--title {
   font-family: "Lato Light", sans-serif;
   font-size: 16px;
   line-height: 1.5em;
@@ -141,7 +141,7 @@ body {
 }
 
 .home-container {
-  height: calc(100% - 130px);
+  min-height: calc(100% - 130px);
 }
 
 .title-container, .resume-title-container {
@@ -311,6 +311,36 @@ body {
 
 .section-list {
   padding-left: 18px;
+}
+
+.strong-link:hover:before {
+  background-color: #fa8072;
+}
+
+.project-heading {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.link-style {
+  text-decoration: none;
+  color: #222;
+  position: relative;
+  display: inline-block;
+}
+.link-style:before {
+  content: "";
+  position: absolute;
+  bottom: 0.2em;
+  width: 100%;
+  height: 2px;
+  background: #9cb9dd;
+  z-index: -1;
+}
+.link-style:hover:before {
+  background: #fa8072;
 }
 
 /*# sourceMappingURL=home.css.map */
