@@ -1,26 +1,25 @@
 @font-face {
   font-family: Lato;
-  src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lato Bold";
-  src: url("/fonts/Lato/Lato-Bold.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lato Light";
-  src: url("/fonts/Lato/Lato-light.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
 }
 html,
 body {
   height: 100%;
 }
 
-.font-base, .footer--text {
-  font-family: Lato, sans-serif;
+.font-base, .footer--text, .footer--title {
+  font-family: "Lato Light", sans-serif;
   font-size: 16px;
-  font-weight: 300;
   line-height: 1.5em;
-  color: #6d88a9;
+  color: #9cb9dd;
 }
 
 .content-container, .footer-container {
@@ -30,8 +29,41 @@ body {
   margin-right: auto;
 }
 
-.footer--text {
-  font-size: 14px;
+.footer-container {
+  border-top: 1px solid #9cb9dd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-contact {
+  font-size: 2rem;
+  color: #9cb9dd;
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  margin: 20px 0;
+}
+
+.footer-contact-icon {
+  color: #9cb9dd;
+}
+.footer-contact-icon:hover {
+  color: #6d88a9;
+}
+
+.footer--title {
+  color: #9cb9dd;
+  font-family: "Lato Bold", sans-serif;
+  font-size: 24px;
+  letter-spacing: 4px;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.footer-title-bracket {
+  color: #9cb9dd;
 }
 
 /*# sourceMappingURL=footer.css.map */
