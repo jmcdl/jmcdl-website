@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    // Target latest version of ECMAScript.
+    "target": "esnext",
+    // Allow default imports from modules with no default export.
+    "allowSyntheticDefaultImports": true,
+    // Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility.
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+    // Specify module code generation
+    "module": "esnext",
+    // Search under node_modules for non-relative imports.
+    "moduleResolution": "node",
+    "strict": true
+  },
+  "include": ["src"]
+}
