@@ -6,7 +6,9 @@
   "author": "jmcdl",
   "scripts": {
     "build": "parcel build",
-    "start": "parcel"
+    "start": "parcel",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "browserslist": [
     "last 2 chrome versions",
@@ -27,15 +29,23 @@
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.3.0",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.4.0-rc.5",
+    "@storybook/addon-docs": "^6.4.0-rc.5",
+    "@storybook/addon-essentials": "^6.4.0-rc.5",
+    "@storybook/addon-links": "^6.4.0-rc.5",
+    "@storybook/react": "^6.4.0-rc.5",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@types/react-router-dom": "^5.3.2",
     "@typescript-eslint/eslint-plugin": "<5.0.0",
     "@typescript-eslint/parser": "<5.0.0",
+    "babel-loader": "^8.2.3",
     "eslint": "<8.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-storybook": "^0.4.2",
     "parcel": "^2.0.0",
     "prettier": "^2.4.1",
     "typescript": "^4.4.4"
