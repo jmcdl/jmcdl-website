@@ -29,6 +29,14 @@ body {
   margin-right: auto;
 }
 
+.basic-link {
+  color: #9cb9dd;
+}
+.basic-link:hover {
+  color: #b4d5ff;
+  text-decoration-color: #b4d5ff;
+}
+
 .navbar {
   color: #fff;
   background-color: #111;
@@ -261,7 +269,7 @@ body {
   transition-delay: 0s;
   transition-duration: 0.2s;
   transform: scale(1.02, 1.02);
-  background-color: #6d88a9;
+  background-color: #b4d5ff;
 }
 
 .resume-title-container {

@@ -18,3 +18,14 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.basic-link {
+  &:hover {
+  color: v.$primary-light;
+  text-decoration-color: v.$primary-light;
+  }
+  //&:visited {
+  //color: v.$primary-dark;
+  //}
+  color: v.$primary;
+}
