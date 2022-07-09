@@ -1,0 +1,8 @@
+@use "variables" as v;
+@use "base";
+@use "navbar";
+@use "footer";
+
+body {
+  background-color: v.$black;
+}

@@ -1,0 +1,151 @@
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato Bold";
+  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato Light";
+  src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
+}
+html,
+body {
+  height: 100%;
+}
+
+.font-base, .footer--text, .footer--title {
+  font-family: "Lato Light", sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #9cb9dd;
+}
+
+.content-container, .footer-container, .navbar-container, .home--navbar-container {
+  width: 80%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.basic-link {
+  color: #9cb9dd;
+}
+.basic-link:hover {
+  color: #b4d5ff;
+  text-decoration-color: #b4d5ff;
+}
+
+.navbar {
+  color: #fff;
+  background-color: #111;
+  text-transform: uppercase;
+  font-family: "Lato Light", sans-serif;
+  line-height: 3rem;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  height: 50px;
+}
+
+.navbar-container, .home--navbar-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home--navbar-container {
+  justify-content: flex-end;
+}
+
+.nav-buttons {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-button {
+  color: #9cb9dd;
+  padding: 0 0.8rem;
+  text-decoration: none;
+  font-size: 16px;
+}
+.nav-button:hover {
+  background-color: #9cb9dd;
+  color: #111;
+  font-family: "Lato Bold", sans-serif;
+}
+.nav-button:hover > a {
+  background-color: #9cb9dd;
+  color: #111;
+}
+
+.nav-button-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.download-button {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #6d88a9;
+}
+.download-button:hover {
+  background-color: #fa8072;
+}
+@media (min-width: 1024px) {
+  .download-button {
+    display: flex;
+  }
+}
+
+.download-button-link {
+  text-decoration: none;
+  padding: 0 0.8rem;
+  color: #fff;
+}
+
+.footer-container {
+  border-top: 1px solid #9cb9dd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-contact {
+  font-size: 2rem;
+  color: #9cb9dd;
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  margin: 20px 0;
+}
+
+.footer-contact-icon {
+  color: #9cb9dd;
+}
+.footer-contact-icon:hover {
+  color: #6d88a9;
+}
+
+.footer--title {
+  color: #9cb9dd;
+  font-family: "Lato Bold", sans-serif;
+  font-size: 24px;
+  letter-spacing: 4px;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.footer-title-bracket {
+  color: #9cb9dd;
+}
+
+body {
+  background-color: #111;
+}
+
+/*# sourceMappingURL=blog.css.map */
