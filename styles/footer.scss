@@ -2,7 +2,7 @@
 @use "base";
 
 .footer-container {
-  @extend .content-container;
+  @extend .container-base;
   border-top: 1px solid v.$primary;
   display: flex;
   flex-direction: column;

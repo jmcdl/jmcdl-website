@@ -7,15 +7,6 @@ body {
   background-color: v.$black;
 }
 
-.home-container {
-  @extend .content-container;
-  min-height: calc(100% - 135px);
-  counter-reset: footnotes;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .title-container {
   padding-top: 100px;
   width: 250px;
@@ -130,7 +121,7 @@ body {
 }
 
 .resume-container {
-  @extend .content-container;
+  @extend .container-base;
   min-height: calc(100% - 135px);
 }
 

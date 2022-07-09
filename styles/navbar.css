@@ -22,7 +22,7 @@ body {
   color: #9cb9dd;
 }
 
-.content-container, .navbar-container, .home--navbar-container {
+.container-base, .navbar-container, .home--navbar-container {
   width: 80%;
   max-width: 900px;
   margin-left: auto;

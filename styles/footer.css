@@ -22,7 +22,7 @@ body {
   color: #9cb9dd;
 }
 
-.content-container, .footer-container {
+.container-base, .footer-container {
   width: 80%;
   max-width: 900px;
   margin-left: auto;
