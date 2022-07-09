@@ -7,3 +7,14 @@
 body {
   background-color: v.$black;
 }
+
+.blog-index-item {
+    display: flex;
+}
+.blog-index-item-date {
+    flex-grow: 1;
+}
+.blog-index-item-link {
+  @extend .basic-link;
+    flex-grow: 5;
+}

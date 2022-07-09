@@ -37,3 +37,55 @@ body {
   }
   color: v.$primary;
 }
+
+
+.title-container {
+  padding-top: 100px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  @media (min-width: v.$small-screen) {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 48px;
+    padding-top: 200px;
+  }
+}
+
+.title-column {
+  flex: 1;
+  justify-content: flex-end;
+  max-width: 50%;
+}
+
+.title-text {
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  text-shadow: -4px -4px 0 v.$primary;
+  color: v.$black;
+  transition: all 0.8s 0s ease-in-out;
+  &:hover {
+    color: v.$white;
+  }
+  @media (min-width: v.$tablet-screen) {
+    font-size: 58px;
+  }
+  @media (min-width: v.$large-screen) {
+    font-size: 75px;
+  }
+}
+
+.main-content {
+  color: v.$primary;
+  font-size: 18px;
+  @media (min-width: v.$small-screen) {
+    font-size: 22px;
+  }
+}
