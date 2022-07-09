@@ -14,7 +14,6 @@
     "not dead"
   ],
   "devDependencies": {
-    "@parcel/transformer-webmanifest": "^2.6.2",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "parcel": "^2.6.2",
