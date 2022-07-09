@@ -2,6 +2,7 @@
 @use "base";
 @use "navbar";
 @use "footer";
+@import "normalize.css";
 
 body {
   background-color: v.$black;
