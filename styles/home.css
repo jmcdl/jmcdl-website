@@ -1,22 +1,11 @@
-@font-face {
-  font-family: Lato;
-  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Lato Bold";
-  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Lato Light";
-  src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
-}
 html,
 body {
   height: 100%;
+  font-family: sans-serif;
+  font-weight: 200;
 }
 
 .font-base, .info-column, .resume-section-title-text, .section-content-column, .project-heading, .footnote-text, .footer--text, .footer--title {
-  font-family: "Lato Light", sans-serif;
   font-size: 16px;
   line-height: 1.5em;
   color: #9cb9dd;
@@ -49,7 +38,6 @@ body {
   color: #fff;
   background-color: #111;
   text-transform: uppercase;
-  font-family: "Lato Light", sans-serif;
   line-height: 3rem;
   font-size: 12px;
   letter-spacing: 0.1rem;
@@ -77,7 +65,6 @@ body {
 .nav-button:hover {
   background-color: #9cb9dd;
   color: #111;
-  font-family: "Lato Bold", sans-serif;
 }
 .nav-button:hover > a {
   background-color: #9cb9dd;
@@ -136,7 +123,6 @@ body {
 
 .footer--title {
   color: #9cb9dd;
-  font-family: "Lato Bold", sans-serif;
   font-size: 24px;
   letter-spacing: 4px;
   display: flex;
@@ -198,7 +184,6 @@ body {
 
 .title-text {
   font-size: 45px;
-  font-family: "Lato Bold", sans-serif;
   font-weight: 900;
   line-height: 1.1;
   margin-top: 0;
@@ -226,7 +211,6 @@ body {
 
 .main-content {
   color: #9cb9dd;
-  font-family: "Lato Light", sans-serif;
   font-size: 18px;
 }
 @media (min-width: 640px) {
@@ -237,7 +221,7 @@ body {
 
 .strong-text {
   color: #111;
-  font-family: "Lato Bold", sans-serif;
+  font-weight: 600;
   line-height: 1;
   position: relative;
   display: inline-block;
@@ -301,7 +285,6 @@ body {
 }
 
 .resume-section-title-text {
-  font-family: "Lato Bold", sans-serif;
   font-size: 22px;
   margin-bottom: 0;
   margin-top: 20px;

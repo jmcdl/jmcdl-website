@@ -6,7 +6,6 @@
   color: v.$white;
   background-color: v.$black;
   text-transform: uppercase;
-  font-family: v.$font-light;
   line-height: 3rem;
   font-size: 12px;
   letter-spacing: 0.1rem;
@@ -34,7 +33,6 @@
   &:hover {
     background-color: v.$primary;
     color: v.$black;
-    font-family: v.$font-bold;
     > a {
       background-color: v.$primary;
       color: v.$black;
