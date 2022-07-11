@@ -4,19 +4,9 @@
   "description": "James McDonell's Website",
   "license": "",
   "author": "jmcdl",
-  "scripts": {
-    "build": "parcel build index.html",
-    "start": "parcel serve index.html"
-  },
-  "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "not dead"
-  ],
   "devDependencies": {
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
-    "parcel": "^2.6.2",
     "prettier": "^2.7.1"
   }
 }
