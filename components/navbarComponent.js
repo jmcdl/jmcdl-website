@@ -76,6 +76,7 @@ navbarTemplate.innerHTML = `
         Resume
       </a>
     </div>
+<!--    <button id="theme-toggle"/>-->
   </div>
 </nav>
 `;
@@ -86,6 +87,20 @@ class NavbarComponent extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
   }
+
+  // connectedCallback () {
+  //   this.shadowRoot.getElementById("theme-toggle")
+  //     .addEventListener("click", this._onClick);
+  // }
+  //
+  // _onClick () {
+  //   const current = document.body.getAttribute("class");
+  //   if (current === "dark") {
+  //     document.body.setAttribute("class", "light");
+  //   } else {
+  //     document.body.setAttribute("class", "dark");
+  //   }
+  // }
 }
 
 customElements.define("navbar-component", NavbarComponent);
