@@ -84,22 +84,23 @@ navbarTemplate.innerHTML = `
 `;
 
 class NavbarComponent extends HTMLElement {
-  constructor () {
+  constructor() {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
   }
 
-  connectedCallback () {
-    this.shadowRoot.getElementById("theme-toggle")
+  connectedCallback() {
+    this.shadowRoot
+      .getElementById("theme-toggle")
       .addEventListener("click", this._onClick);
   }
 
   disconnectedCallback() {
-    this.removeEventListener('click', this._onClick);
+    this.removeEventListener("click", this._onClick);
   }
 
-  _onClick () {
+  _onClick() {
     const current = document.body.getAttribute("class");
     if (current === "dark") {
       document.body.setAttribute("class", "light");

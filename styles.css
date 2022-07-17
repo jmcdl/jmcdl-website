@@ -1,47 +1,47 @@
 .dark {
-    --background-color: #111;
-    --primary-color: #9cb9dd;
-    /*--primary-color-dark: #6d88a9;*/
-    /*--primary-color-light: #b4d5ff;*/
+  --background-color: #111;
+  --primary-color: #9cb9dd;
+  /*--primary-color-dark: #6d88a9;*/
+  /*--primary-color-light: #b4d5ff;*/
 }
 
 .light {
-    --background-color: #c6d5fc;
-    --primary-color: #031833FF;
-    /*--primary-color-dark: #6d88a9;*/
-    /*--primary-color-light: #b4d5ff;*/
+  --background-color: #c6d5fc;
+  --primary-color: #031833ff;
+  /*--primary-color-dark: #6d88a9;*/
+  /*--primary-color-light: #b4d5ff;*/
 }
 
 html,
 body {
-    height: 100%;
-    font-family: sans-serif;
-    font-weight: 200;
-    color: var(--primary-color);
-    background: var(--background-color);
+  height: 100%;
+  font-family: sans-serif;
+  font-weight: 200;
+  color: var(--primary-color);
+  background: var(--background-color);
 }
 
 .content-container {
-    width: 80%;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: calc(100% - 136px);
-    counter-reset: footnotes;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 80%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: calc(100% - 136px);
+  counter-reset: footnotes;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main-content {
-    color: var(--primary-color);
-    font-size: 18px;
+  color: var(--primary-color);
+  font-size: 18px;
 }
 
 @media (min-width: 640px) {
-    .main-content {
-        font-size: 22px;
-    }
+  .main-content {
+    font-size: 22px;
+  }
 }
 
 .basic-link {
@@ -89,7 +89,7 @@ body {
 
 /* footnote text */
 
-a[aria-describedby=footnote] {
+a[aria-describedby="footnote"] {
   counter-increment: footnotes;
   text-decoration: none;
   color: #111;
@@ -104,7 +104,7 @@ a[aria-describedby=footnote] {
   * 5. Reset link styles on the number to show it's usable
   */
 }
-a[aria-describedby=footnote]:after {
+a[aria-describedby="footnote"]:after {
   content: counter(footnotes);
   vertical-align: super;
   font-size: 14px;
@@ -112,7 +112,7 @@ a[aria-describedby=footnote]:after {
   color: #9cb9dd;
   cursor: pointer;
 }
-a[aria-describedby=footnote]:hover:after {
+a[aria-describedby="footnote"]:hover:after {
   color: #6d88a9;
 }
 
@@ -134,16 +134,16 @@ a[aria-describedby=footnote]:hover:after {
 /* blog styles */
 
 .blog-index-item {
-    display: flex;
+  display: flex;
 }
 
 .blog-index-item-date {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .blog-index-item-link {
-    color: #9cb9dd;
-    flex-grow: 5;
+  color: #9cb9dd;
+  flex-grow: 5;
 }
 .blog-index-item-link:hover {
   color: #b4d5ff;
