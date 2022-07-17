@@ -55,8 +55,7 @@ largeTitleTemplate.innerHTML = `
   </style>
   <div class="title-container">
     <div class="title-column">
-      <h1 class="title-text">James</h1>
-      <h1 class="title-text"> McDonell</h1>
+      <h1 class="title-text"><slot></slot></h1>
     </div>
   </div>
 `;

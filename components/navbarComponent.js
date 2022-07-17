@@ -57,7 +57,10 @@ navbarTemplate.innerHTML = `
 </style>
 <nav class="navbar">
   <div class="navbar-container">
+  <div class="nav-buttons">
     <a href="/" class="nav-button">jmcdl</a>
+    <button id="theme-toggle"></button>
+    </div>
     <div class="nav-buttons">
       <a
         class="nav-button"
@@ -76,7 +79,6 @@ navbarTemplate.innerHTML = `
         Resume
       </a>
     </div>
-<!--    <button id="theme-toggle"/>-->
   </div>
 </nav>
 `;
@@ -88,19 +90,23 @@ class NavbarComponent extends HTMLElement {
     this.shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
   }
 
-  // connectedCallback () {
-  //   this.shadowRoot.getElementById("theme-toggle")
-  //     .addEventListener("click", this._onClick);
-  // }
-  //
-  // _onClick () {
-  //   const current = document.body.getAttribute("class");
-  //   if (current === "dark") {
-  //     document.body.setAttribute("class", "light");
-  //   } else {
-  //     document.body.setAttribute("class", "dark");
-  //   }
-  // }
+  connectedCallback () {
+    this.shadowRoot.getElementById("theme-toggle")
+      .addEventListener("click", this._onClick);
+  }
+
+  disconnectedCallback() {
+    this.removeEventListener('click', this._onClick);
+  }
+
+  _onClick () {
+    const current = document.body.getAttribute("class");
+    if (current === "dark") {
+      document.body.setAttribute("class", "light");
+    } else {
+      document.body.setAttribute("class", "dark");
+    }
+  }
 }
 
 customElements.define("navbar-component", NavbarComponent);

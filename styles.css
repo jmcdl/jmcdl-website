@@ -6,13 +6,146 @@
 }
 
 .light {
-    --background-color: #9cb9dd;
-    --primary-color: #111;
+    --background-color: #c6d5fc;
+    --primary-color: #031833FF;
     /*--primary-color-dark: #6d88a9;*/
     /*--primary-color-light: #b4d5ff;*/
 }
 
+html,
 body {
+    height: 100%;
+    font-family: sans-serif;
+    font-weight: 200;
     color: var(--primary-color);
     background: var(--background-color);
+}
+
+.content-container {
+    width: 80%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: calc(100% - 136px);
+    counter-reset: footnotes;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-content {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+@media (min-width: 640px) {
+    .main-content {
+        font-size: 22px;
+    }
+}
+
+.basic-link {
+  color: #9cb9dd;
+}
+.basic-link:hover {
+  color: #b4d5ff;
+  text-decoration-color: #b4d5ff;
+}
+
+.strong-text {
+  color: #111;
+  font-weight: 600;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+.strong-text a {
+  text-decoration: none;
+  color: #222;
+}
+
+.strong-text:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 0.2rem;
+  background-color: #9cb9dd;
+  transition: all 0.2s 0s ease-in-out;
+}
+
+.strong-text:hover:before {
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+  transform: scale(1.02, 1.02);
+  background-color: #b4d5ff;
+}
+
+/* footnote text */
+
+a[aria-describedby=footnote] {
+  counter-increment: footnotes;
+  text-decoration: none;
+  color: #111;
+  cursor: default;
+  outline: none;
+  /**
+  * Actual numbered references
+  * 1. Display the current state of the counter (e.g. `[1]`)
+  * 2. Align text as superscript
+  * 3. Make the number smaller (since it's superscript)
+  * 4. Slightly offset the number from the text
+  * 5. Reset link styles on the number to show it's usable
+  */
+}
+a[aria-describedby=footnote]:after {
+  content: counter(footnotes);
+  vertical-align: super;
+  font-size: 14px;
+  margin-left: 2px;
+  color: #9cb9dd;
+  cursor: pointer;
+}
+a[aria-describedby=footnote]:hover:after {
+  color: #6d88a9;
+}
+
+#footnote:target {
+  background: yellow;
+}
+
+.footnote-text {
+  font-size: 16px;
+  padding-inline-start: 20px;
+}
+
+[aria-label="Back to content"] {
+  color: #9cb9dd;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* blog styles */
+
+.blog-index-item {
+    display: flex;
+}
+
+.blog-index-item-date {
+    flex-grow: 1;
+}
+
+.blog-index-item-link {
+    color: #9cb9dd;
+    flex-grow: 5;
+}
+.blog-index-item-link:hover {
+  color: #b4d5ff;
+  text-decoration-color: #b4d5ff;
 }

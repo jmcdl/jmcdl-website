@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#9cb9dd" />
     <script src="../components/footerComponent.js" defer></script>
+    <script src="../components/navbarComponent.js" defer></script>
+    <script src="../components/largeTitleComponent.js" defer></script>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -24,40 +26,14 @@
       sizes="16x16"
       href="../favicon/favicon-16x16.png"
     />
-    <link rel="stylesheet" href="../styles/blog.css" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
 
   <body class="dark">
-    <nav class="navbar">
-      <div class="navbar-container">
-        <a href="../index.html" class="nav-button">home</a>
-        <div class="nav-buttons">
-          <a
-            class="nav-button"
-            href=""
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            Blog
-          </a>
-          <a
-            class="nav-button"
-            href="../resume/index.html"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            Resume
-          </a>
-        </div>
-      </div>
-    </nav>
+    <navbar-component></navbar-component>
     <div class="content-container">
       <div>
-        <div class="title-container">
-          <div class="title-column">
-            <h1 class="title-text">Articles</h1>
-          </div>
-        </div>
+        <large-title>Articles</large-title>
         <main class="main-content">
           <div class="blog-index-item">
             <span class="blog-index-item-date">July 2022</span
