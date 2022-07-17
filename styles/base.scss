@@ -57,6 +57,9 @@ body {
   flex: 1;
   justify-content: flex-end;
   max-width: 50%;
+  &:hover .title-text {
+    color: grey;
+  }
 }
 
 .title-text {
@@ -71,9 +74,6 @@ body {
   text-shadow: -4px -4px 0 v.$primary;
   color: v.$black;
   transition: all 0.8s 0s ease-in-out;
-  &:hover {
-    color: v.$white;
-  }
   @media (min-width: v.$tablet-screen) {
     font-size: 58px;
   }

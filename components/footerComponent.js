@@ -47,7 +47,7 @@ footerTemplate.innerHTML = `
     </div>
 `;
 
-class CustomFooter extends HTMLElement {
+class FooterComponent extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -55,4 +55,4 @@ class CustomFooter extends HTMLElement {
   }
 }
 
-customElements.define("custom-footer", CustomFooter);
+customElements.define("footer-component", FooterComponent);

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>jmcdl</title>
     <meta name="description" content="James McDonell's website" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#9cb9dd" />
-    <script src="components/customFooter.js" defer></script>
+    <script src="components/footerComponent.js" defer></script>
+    <script src="components/navbarComponent.js" defer></script>
+    <script src="components/largeTitleComponent.js" defer></script>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -28,37 +30,10 @@
   </head>
 
   <body>
-    <nav class="navbar">
-      <div class="navbar-container">
-        <a href="#" class="nav-button">home</a>
-        <div class="nav-buttons">
-          <a
-            class="nav-button"
-            href="blog/index.html"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            Blog
-          </a>
-          <a
-            class="nav-button"
-            href="resume/index.html"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            Resume
-          </a>
-        </div>
-      </div>
-    </nav>
+    <navbar-component></navbar-component>
     <div class="content-container">
       <div>
-        <section class="title-container">
-          <div class="title-column">
-            <h1 class="title-text">James</h1>
-            <h1 class="title-text"> McDonell</h1>
-          </div>
-        </section>
+        <large-title title="James McDonell"></large-title>
         <main class="main-content">
           <p>
             I am a software developer with experience building complex web
@@ -96,7 +71,7 @@
           </p>
           <p>
             Outside of work, I like to play music and study
-            <a class="basic-link" href="blog/2022/07/currently-learning.html">things that interest me</a>.
+            <a class="basic-link" href="/blog/index.html">things that interest me</a>.
           </p>
         </main>
       </div>
@@ -111,6 +86,6 @@
         </li>
       </ol>
     </div>
-    <custom-footer></custom-footer>
+    <footer-component></footer-component>
   </body>
 </html>
