@@ -2,8 +2,7 @@ const navbarTemplate = document.createElement("template");
 navbarTemplate.innerHTML = `
 <style>
   .navbar {
-  color: #fff;
-  background-color: #111;
+  background-color: var(--background-color);
   text-transform: uppercase;
   line-height: 3rem;
   font-size: 12px;
@@ -28,19 +27,37 @@ navbarTemplate.innerHTML = `
   }
   
   .nav-button {
-    color: #9cb9dd;
-    padding: 0 0.8rem;
+    color: var(--primary-color);
+    margin: 0 0.8rem;
     text-decoration: none;
     font-size: 16px;
+    display: inline-block;
+    position: relative;
   }
-  .nav-button:hover {
-    background-color: #9cb9dd;
-    color: #111;
+
+  .nav-button:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--primary-color);
+    transition: opacity 300ms, transform 300ms;
+    opacity 1;
+    transform: scale(0);
+    transform-origin: center;
+  }
+  
+  .nav-button:hover:after,
+  .nav-button:focus:after {
+    opacity: 1;
+    transform: scale(1);
   }
 </style>
 <nav class="navbar">
   <div class="navbar-container">
-    <a href="/" class="nav-button">home</a>
+    <a href="/" class="nav-button">jmcdl</a>
     <div class="nav-buttons">
       <a
         class="nav-button"
@@ -64,7 +81,7 @@ navbarTemplate.innerHTML = `
 `;
 
 class NavbarComponent extends HTMLElement {
-  constructor() {
+  constructor () {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));

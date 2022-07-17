@@ -1,0 +1,18 @@
+.dark {
+    --background-color: #111;
+    --primary-color: #9cb9dd;
+    /*--primary-color-dark: #6d88a9;*/
+    /*--primary-color-light: #b4d5ff;*/
+}
+
+.light {
+    --background-color: #9cb9dd;
+    --primary-color: #111;
+    /*--primary-color-dark: #6d88a9;*/
+    /*--primary-color-light: #b4d5ff;*/
+}
+
+body {
+    color: var(--primary-color);
+    background: var(--background-color);
+}
