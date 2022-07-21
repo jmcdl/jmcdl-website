@@ -1,6 +1,7 @@
 .dark {
   --background-color: #111;
   --primary-color: #9cb9dd;
+  font-weight: 200;
   /*--primary-color-dark: #6d88a9;*/
   /*--primary-color-light: #b4d5ff;*/
 }
@@ -8,17 +9,15 @@
 .light {
   --background-color: #c6d5fc;
   --primary-color: #031833ff;
+  font-weight: 500;
   /*--primary-color-dark: #6d88a9;*/
   /*--primary-color-light: #b4d5ff;*/
 }
 
 html,
 body {
-  --duration: 0.5s;
-  --timing: ease;
   height: 100%;
   font-family: sans-serif;
-  font-weight: 200;
   color: var(--primary-color);
   background-color: var(--background-color);
   transition: color 0.5s ease, background-color 0.5s ease;
