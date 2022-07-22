@@ -1,17 +1,15 @@
 .dark {
   --background-color: #111;
   --primary-color: #9cb9dd;
+  --primary-color-light: #b4d5ff;
   font-weight: 200;
-  /*--primary-color-dark: #6d88a9;*/
-  /*--primary-color-light: #b4d5ff;*/
 }
 
 .light {
-  --background-color: #c6d5fc;
+  --background-color: #d2d8e9;
   --primary-color: #031833ff;
+  --primary-color-light: #062c5d;
   font-weight: 500;
-  /*--primary-color-dark: #6d88a9;*/
-  /*--primary-color-light: #b4d5ff;*/
 }
 
 html,
@@ -47,11 +45,11 @@ body {
 }
 
 .basic-link {
-  color: #9cb9dd;
+  color: var(--primary-color);
 }
 .basic-link:hover {
-  color: #b4d5ff;
-  text-decoration-color: #b4d5ff;
+  color: var(--primary-color-light);
+  text-decoration-color: var(--primary-color-light);
 }
 
 .strong-text {
@@ -86,7 +84,7 @@ body {
   transition-delay: 0s;
   transition-duration: 0.2s;
   transform: scale(1.02, 1.02);
-  background-color: #b4d5ff;
+  background-color: var(--primary-color-light);
 }
 
 /* footnote text */
@@ -94,7 +92,7 @@ body {
 a[aria-describedby="footnote"] {
   counter-increment: footnotes;
   text-decoration: none;
-  color: #111;
+  color: var(--primary-color);
   cursor: default;
   outline: none;
   /**
@@ -111,12 +109,12 @@ a[aria-describedby="footnote"]:after {
   vertical-align: super;
   font-size: 14px;
   margin-left: 2px;
-  color: #9cb9dd;
+  color:  var(--primary-color);
   cursor: pointer;
 }
-a[aria-describedby="footnote"]:hover:after {
-  color: #6d88a9;
-}
+/*a[aria-describedby="footnote"]:hover:after {*/
+/*  color: #6d88a9;*/
+/*}*/
 
 #footnote:target {
   background: yellow;
@@ -128,13 +126,12 @@ a[aria-describedby="footnote"]:hover:after {
 }
 
 [aria-label="Back to content"] {
-  color: #9cb9dd;
+  color: var(--primary-color);
   font-size: 12px;
   margin-left: 4px;
 }
 
 /* blog styles */
-
 .blog-index-item {
   display: flex;
 }
@@ -144,10 +141,10 @@ a[aria-describedby="footnote"]:hover:after {
 }
 
 .blog-index-item-link {
-  color: #9cb9dd;
+  color: var(--primary-color);
   flex-grow: 5;
 }
 .blog-index-item-link:hover {
-  color: #b4d5ff;
-  text-decoration-color: #b4d5ff;
+  color: var(--primary-color-light);
+  text-decoration-color: var(--primary-color-light);
 }
