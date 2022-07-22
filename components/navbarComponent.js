@@ -80,8 +80,8 @@ navbarTemplate.innerHTML = `
       </a>
       <a
         class="nav-button"
-        href="/resume/index.html"
-        target="_self"
+        href="/resume.pdf"
+        target="_blank"
         rel="noopener noreferrer"
       >
         Resume
