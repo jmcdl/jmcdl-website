@@ -1,18 +1,16 @@
 {
   "name": "jmcdl.com",
   "version": "0.0.1",
-  "description": "",
+  "description": "James McDonell's Website",
   "license": "",
   "author": "jmcdl",
-  "scripts": {
-    "build": "parcel build index.html",
-    "start": "parcel serve index.html"
-  },
+  "private": true,
   "devDependencies": {
-    "@parcel/transformer-webmanifest": "^2.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "parcel": "^2.0.0-rc.0",
-    "prettier": "^2.4.0"
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1"
+  },
+  "scripts": {
+    "build": ""
   }
 }

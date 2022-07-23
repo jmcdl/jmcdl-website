@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>jmcdl</title>
+    <meta name="description" content="James McDonell's website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#9cb9dd" />
+    <script src="components/footerComponent.js" defer></script>
+    <script src="components/navbarComponent.js" defer></script>
+    <script src="components/largeTitleComponent.js" defer></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="dark">
+    <navbar-component></navbar-component>
+    <div class="content-container">
+      <div>
+        <large-title>James McDonell</large-title>
+        <main class="main-content">
+          <p>
+            I am a software developer with experience building complex web
+            applications.
+          </p>
+          <p>
+            Currently, I am using
+            <span class="strong-text">
+              <a
+                href="https://reactjs.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >React</a
+              >
+            </span>
+            and
+            <span class="strong-text">
+              <a
+                href="https://firebase.google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Firebase</a
+              ></span
+            >
+            to build
+            <span class="strong-text">
+              <a
+                href="https://www.intakt.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >inTakt</a
+              ></span
+            ><a aria-describedby="footnote" href="#intakt"></a>, a scheduling
+            and project management application for the construction industry.
+          </p>
+          <p>
+            Outside of work, I like to play music and study
+            <a class="basic-link" href="/blog/index.html"
+              >things that interest me</a
+            >.
+          </p>
+        </main>
+      </div>
+      <ol id="footnote" class="footnote-text">
+        <li id="intakt">
+          I built the app, not this landing page.
+<!--          <a href="#intakt-ref" aria-label="Back to content">↵</a>-->
+        </li>
+      </ol>
+    </div>
+    <footer-component></footer-component>
+  </body>
+</html>
