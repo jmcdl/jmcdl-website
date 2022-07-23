@@ -72,7 +72,7 @@ navbarTemplate.innerHTML = `
       <a href="/" class="nav-button">jmcdl</a>
       <a
         class="nav-button"
-        href="/blog/index.html"
+        href="blog/index.html"
         target="_self"
         rel="noopener noreferrer"
       >
@@ -80,7 +80,7 @@ navbarTemplate.innerHTML = `
       </a>
       <a
         class="nav-button"
-        href="/resume.pdf"
+        href="resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >
