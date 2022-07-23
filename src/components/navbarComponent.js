@@ -3,15 +3,15 @@ navbarTemplate.innerHTML = `
 <style>
   .navbar {
   background-color: var(--background-color);
-  text-transform: uppercase;
   line-height: 3rem;
   font-size: 12px;
   letter-spacing: 0.1rem;
-  height: 50px;
+  height: 70px;
   }
   
   .navbar-container {
     width: 80%;
+    height: 100%;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
@@ -33,6 +33,7 @@ navbarTemplate.innerHTML = `
     font-size: 16px;
     display: inline-block;
     position: relative;
+    align-self: center;
   }
 
   .nav-button:after {
@@ -76,7 +77,7 @@ navbarTemplate.innerHTML = `
         target="_self"
         rel="noopener noreferrer"
       >
-        Blog
+        blog
       </a>
       <a
         class="nav-button"
@@ -84,7 +85,7 @@ navbarTemplate.innerHTML = `
         target="_blank"
         rel="noopener noreferrer"
       >
-        Resume
+        resume
       </a>
     </div>
     <button class="toggle-button" id="theme-toggle"></button>

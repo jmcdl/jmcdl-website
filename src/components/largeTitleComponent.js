@@ -38,7 +38,7 @@ largeTitleTemplate.innerHTML = `
   display: flex;
   flex-wrap: wrap;
   text-shadow: -4px -4px 0 #9cb9dd;
-  color: #111;
+  color: #22272e;
   transition: all 0.8s 0s ease-in-out;
 }
 @media (min-width: 768px) {
