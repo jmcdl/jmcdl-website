@@ -69,10 +69,10 @@ navbarTemplate.innerHTML = `
 <nav class="navbar">
   <div class="navbar-container">
     <div class="nav-buttons">
-      <a href="/" class="nav-button">jmcdl</a>
+      <a href="https://www.jmcdl.com/" class="nav-button">jmcdl</a>
       <a
         class="nav-button"
-        href="blog/index.html"
+        href="https://www.jmcdl.com/blog/index.html"
         target="_self"
         rel="noopener noreferrer"
       >
@@ -80,7 +80,7 @@ navbarTemplate.innerHTML = `
       </a>
       <a
         class="nav-button"
-        href="resume.pdf"
+        href="https://www.jmcdl.com/resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >
