@@ -4,9 +4,13 @@
   "description": "James McDonell's Website",
   "license": "",
   "author": "jmcdl",
+  "private": true,
   "devDependencies": {
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.7.1"
+  },
+  "scripts": {
+    "build": ""
   }
 }
