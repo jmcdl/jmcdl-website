@@ -2,12 +2,16 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>blog</title>
-    <meta name="description" content="James McDonell's blog" />
+    <title>currently studying</title>
+    <meta
+      name="description"
+      content="Blog Article - Things I'm Currently Studying"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#9cb9dd" />
     <script src="../components/footerComponent.js" defer></script>
     <script src="../components/navbarComponent.js" defer></script>
+    <script src="../components/articleTitleComponent.js" defer></script>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -30,11 +34,29 @@
   </head>
   <body class="dark">
     <navbar-component></navbar-component>
-     <div class="content-container">
-       <div class="blog-title-container">
-      <h1>Things I'm Currently Studying</h1>
-       </div>
-     </div>
+    <div class="content-container">
+      <div>
+        <article-title
+          date="July 2020"
+          title="Things I'm Currently Studying"
+          description="So many interesting things, so little time."
+        ></article-title>
+        <main class="main-content">
+          <p>
+            So this is a thing about a thing. I will write words to fill out
+            this thing.
+          </p>
+          <p>
+            Whether you’re thinking up a new open source project or building
+            your product roadmap at work, there’s usually some period of time
+            where you’re doing research. It may start with identifying a problem
+            and then lead into a period of research into what solutions (if any)
+            already exist, how they stack up, and what the broader market looks
+            like.
+          </p>
+        </main>
+      </div>
+    </div>
     <footer-component></footer-component>
   </body>
 </html>
