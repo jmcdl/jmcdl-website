@@ -11,6 +11,7 @@ footerTemplate.innerHTML = `
         flex-direction: column;
         align-items: center;
       }
+      
     .icons-container {
       list-style-type: none;
       padding: 0;
@@ -20,11 +21,17 @@ footerTemplate.innerHTML = `
       width: 200px;
       margin: 20px 0;
     }
+    
     .footer-contact-icon {
-      border: 1px solid var(--background-color);
+      /*border: 1px solid var(--background-color);*/
       color: var(--primary-color);
       display: flex;
       padding: 4px;
+    }
+    
+    .footer-contact-icon:hover {
+      color: var(--primary-color-light);
+      text-decoration-color: var(--primary-color-light);
     }
   </style>
     <div class="footer-container">
