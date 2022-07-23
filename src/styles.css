@@ -2,6 +2,7 @@
   --background-color: #111;
   --primary-color: #9cb9dd;
   --primary-color-light: #b4d5ff;
+
   font-weight: 200;
 }
 
@@ -9,6 +10,7 @@
   --background-color: #d2d8e9;
   --primary-color: #031833ff;
   --primary-color-light: #062c5d;
+
   font-weight: 500;
 }
 
@@ -47,6 +49,7 @@ body {
 .basic-link {
   color: var(--primary-color);
 }
+
 .basic-link:hover {
   color: var(--primary-color-light);
   text-decoration-color: var(--primary-color-light);
@@ -61,12 +64,13 @@ body {
   padding-left: 0.8rem;
   padding-right: 0.8rem;
 }
+
 .strong-text a {
   text-decoration: none;
   color: #222;
 }
 
-.strong-text:before {
+.strong-text::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -80,7 +84,7 @@ body {
   transition: all 0.2s 0s ease-in-out;
 }
 
-.strong-text:hover:before {
+.strong-text:hover::before {
   transition-delay: 0s;
   transition-duration: 0.2s;
   transform: scale(1.02, 1.02);
@@ -89,13 +93,7 @@ body {
 
 /* footnote text */
 
-a[aria-describedby="footnote"] {
-  counter-increment: footnotes;
-  text-decoration: none;
-  color: var(--primary-color);
-  cursor: default;
-  outline: none;
-  /**
+/**
   * Actual numbered references
   * 1. Display the current state of the counter (e.g. `[1]`)
   * 2. Align text as superscript
@@ -103,18 +101,29 @@ a[aria-describedby="footnote"] {
   * 4. Slightly offset the number from the text
   * 5. Reset link styles on the number to show it's usable
   */
+
+a[aria-describedby="footnote"] {
+  counter-increment: footnotes;
+  text-decoration: none;
+  color: var(--primary-color);
+  cursor: default;
+  outline: none;
 }
-a[aria-describedby="footnote"]:after {
+
+a[aria-describedby="footnote"]::after {
   content: counter(footnotes);
   vertical-align: super;
   font-size: 14px;
   margin-left: 2px;
-  color:  var(--primary-color);
+  color: var(--primary-color);
   cursor: pointer;
 }
-/*a[aria-describedby="footnote"]:hover:after {*/
-/*  color: #6d88a9;*/
-/*}*/
+
+/*
+a[aria-describedby="footnote"]:hover::after {
+  color: #6d88a9;
+}
+*/
 
 #footnote:target {
   background: yellow;
@@ -144,6 +153,7 @@ a[aria-describedby="footnote"]:after {
   color: var(--primary-color);
   flex-grow: 5;
 }
+
 .blog-index-item-link:hover {
   color: var(--primary-color-light);
   text-decoration-color: var(--primary-color-light);
