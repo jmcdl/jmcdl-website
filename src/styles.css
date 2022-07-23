@@ -1,15 +1,28 @@
 .dark {
-  --background-color: #111;
+  --background-color: #22272e;
   --primary-color: #9cb9dd;
   --primary-color-light: #b4d5ff;
+
   font-weight: 200;
 }
 
 .light {
-  --background-color: #d2d8e9;
+  --background-color: #fff;
   --primary-color: #031833ff;
   --primary-color-light: #062c5d;
+
   font-weight: 500;
+}
+
+html {
+  --size-12px: 0.75rem;
+  --size-14px: 0.875rem;
+  --size-16px: 1rem;
+  --size-18px: 1.125rem;
+  --size-20px: 1.25rem;
+  --size-22px: 1.375rem;
+  --size-28px: 1.75rem;
+  --size-40px: 2.5rem;
 }
 
 html,
@@ -26,7 +39,7 @@ body {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  min-height: calc(100% - 136px);
+  min-height: calc(100% - 151px);
   counter-reset: footnotes;
   display: flex;
   flex-direction: column;
@@ -35,18 +48,19 @@ body {
 
 .main-content {
   color: var(--primary-color);
-  font-size: 18px;
+  font-size: var(--size-18px);
 }
 
 @media (min-width: 640px) {
   .main-content {
-    font-size: 22px;
+    font-size: var(--size-20px);
   }
 }
 
 .basic-link {
   color: var(--primary-color);
 }
+
 .basic-link:hover {
   color: var(--primary-color-light);
   text-decoration-color: var(--primary-color-light);
@@ -58,44 +72,39 @@ body {
   line-height: 1;
   position: relative;
   display: inline-block;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
+  padding-left: 8px;
+  padding-right: 8px;
 }
+
 .strong-text a {
   text-decoration: none;
   color: #222;
 }
 
-.strong-text:before {
+.strong-text::before {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 0;
+  top: -2px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -2px;
   margin: auto;
-  border-radius: 0.2rem;
+  border-radius: 4px;
   background-color: #9cb9dd;
   transition: all 0.2s 0s ease-in-out;
 }
 
-.strong-text:hover:before {
+.strong-text:hover::before {
   transition-delay: 0s;
   transition-duration: 0.2s;
   transform: scale(1.02, 1.02);
-  background-color: var(--primary-color-light);
+  background-color: #b4d5ff;
 }
 
 /* footnote text */
 
-a[aria-describedby="footnote"] {
-  counter-increment: footnotes;
-  text-decoration: none;
-  color: var(--primary-color);
-  cursor: default;
-  outline: none;
-  /**
+/**
   * Actual numbered references
   * 1. Display the current state of the counter (e.g. `[1]`)
   * 2. Align text as superscript
@@ -103,31 +112,44 @@ a[aria-describedby="footnote"] {
   * 4. Slightly offset the number from the text
   * 5. Reset link styles on the number to show it's usable
   */
+
+a[aria-describedby="footnote"] {
+  counter-increment: footnotes;
+  text-decoration: none;
+  color: var(--primary-color);
+  cursor: default;
+  outline: none;
 }
-a[aria-describedby="footnote"]:after {
+
+a[aria-describedby="footnote"]::after {
   content: counter(footnotes);
   vertical-align: super;
-  font-size: 14px;
+  font-size: var(--size-14px);
   margin-left: 2px;
-  color:  var(--primary-color);
+  color: var(--primary-color);
   cursor: pointer;
 }
-/*a[aria-describedby="footnote"]:hover:after {*/
-/*  color: #6d88a9;*/
-/*}*/
 
+/*
+a[aria-describedby="footnote"]:hover::after {
+  color: #6d88a9;
+}
+*/
+
+/*
 #footnote:target {
   background: yellow;
 }
+*/
 
 .footnote-text {
-  font-size: 16px;
+  font-size: var(--size-16px);
   padding-inline-start: 20px;
 }
 
 [aria-label="Back to content"] {
   color: var(--primary-color);
-  font-size: 12px;
+  font-size: var(--size-12px);
   margin-left: 4px;
 }
 
@@ -144,6 +166,7 @@ a[aria-describedby="footnote"]:after {
   color: var(--primary-color);
   flex-grow: 5;
 }
+
 .blog-index-item-link:hover {
   color: var(--primary-color-light);
   text-decoration-color: var(--primary-color-light);

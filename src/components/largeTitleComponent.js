@@ -2,11 +2,11 @@ const largeTitleTemplate = document.createElement("template");
 largeTitleTemplate.innerHTML = `
  <style> 
 .title-container {
-  padding-top: 100px;
   width: 250px;
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
+  margin-top: 100px;
 }
 
 @media (min-width: 640px) {
@@ -14,7 +14,7 @@ largeTitleTemplate.innerHTML = `
     flex-direction: row;
     width: 100%;
     margin-bottom: 48px;
-    padding-top: 200px;
+    margin-top: 200px;
   }
 }
 
@@ -38,7 +38,7 @@ largeTitleTemplate.innerHTML = `
   display: flex;
   flex-wrap: wrap;
   text-shadow: -4px -4px 0 #9cb9dd;
-  color: #111;
+  color: #22272e;
   transition: all 0.8s 0s ease-in-out;
 }
 @media (min-width: 768px) {
