@@ -11,7 +11,7 @@
   --background-color: #fff;
   --primary-color: #031833ff;
   --primary-color-light: #062c5d;
-  --blog-title-color: #062c5d ;
+  --blog-title-color: #062c5d;
 
   font-weight: 500;
 }
@@ -163,6 +163,13 @@ a[aria-describedby="footnote"]:hover::after {
 
 .blog-index-item-date {
   flex-grow: 1;
+  align-self: center;
+  font-size: var(--size-16px);
+  font-weight: bold;
+  background: var(--primary-color);
+  background: linear-gradient(140deg, #22272e -20%, #9cb9dd 40%);
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 .blog-index-item-link {

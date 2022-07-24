@@ -1,5 +1,5 @@
-const articleTitleTemplate = document.createElement("template");
-articleTitleTemplate.innerHTML = `
+const blogTitleTemplate = document.createElement("template");
+blogTitleTemplate.innerHTML = `
  <style> 
    h1 {
    font-weight: inherit;
@@ -26,11 +26,6 @@ articleTitleTemplate.innerHTML = `
     -webkit-background-clip: text;
   }
   
-  .description-text {
-    font-size: var(--size-18px);
-    margin: 0;
-  }
-  
   @media (min-width: 640px) {
     .title-container {
       padding-top: 32px;
@@ -40,33 +35,27 @@ articleTitleTemplate.innerHTML = `
     font-size: var(--size-40px);
     }
   }
-/*.title-column:hover .title-text {*/
-/*  color: grey;*/
-/*}*/
   </style>
   <div class="title-container">
     <h1 id="title" class="title-text"></h1>
     <div id="date" class="date-text"></div>
-<!--    <p id="description" class="description-text"></p>-->
   </div>
 `;
 
-class ArticleTitleComponent extends HTMLElement {
+class BlogTitleComponent extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.shadowRoot.appendChild(articleTitleTemplate.content.cloneNode(true));
+    this.shadowRoot.appendChild(blogTitleTemplate.content.cloneNode(true));
 
-    // console.log("this.title", this.title);
-    // console.log("this.date", this.date);
-    // console.log("this.description", this.description);
-    // const title = this.title;
     const dateElement = this.shadowRoot.getElementById("date");
-    dateElement.textContent = this.date;
+    if (dateElement) {
+      dateElement.textContent = this.date;
+    }
     const titleElement = this.shadowRoot.getElementById("title");
-    titleElement.textContent = this.title;
-    // const descriptionElement = this.shadowRoot.getElementById("description");
-    // descriptionElement.textContent = this.description;
+    if (titleElement) {
+      titleElement.textContent = this.title;
+    }
   }
 
   // gathering data from element attributes
@@ -74,13 +63,9 @@ class ArticleTitleComponent extends HTMLElement {
     return this.getAttribute("date") ?? "";
   }
 
-  // get description() {
-  //   return this.getAttribute("description") ?? "";
-  // }
-
   get title() {
     return this.getAttribute("title") ?? "";
   }
 }
 
-customElements.define("article-title", ArticleTitleComponent);
+customElements.define("blog-title", BlogTitleComponent);
