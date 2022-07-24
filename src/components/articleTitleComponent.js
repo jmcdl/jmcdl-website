@@ -58,16 +58,16 @@ class ArticleTitleComponent extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(articleTitleTemplate.content.cloneNode(true));
 
-    console.log("this.title", this.title);
-    console.log("this.date", this.date);
-    console.log("this.description", this.description);
+    // console.log("this.title", this.title);
+    // console.log("this.date", this.date);
+    // console.log("this.description", this.description);
     // const title = this.title;
     const dateElement = this.shadowRoot.getElementById("date");
     dateElement.textContent = this.date;
     const titleElement = this.shadowRoot.getElementById("title");
     titleElement.textContent = this.title;
-    const descriptionElement = this.shadowRoot.getElementById("description");
-    descriptionElement.textContent = this.description;
+    // const descriptionElement = this.shadowRoot.getElementById("description");
+    // descriptionElement.textContent = this.description;
   }
 
   // gathering data from element attributes
@@ -75,9 +75,9 @@ class ArticleTitleComponent extends HTMLElement {
     return this.getAttribute("date") ?? "";
   }
 
-  get description() {
-    return this.getAttribute("description") ?? "";
-  }
+  // get description() {
+  //   return this.getAttribute("description") ?? "";
+  // }
 
   get title() {
     return this.getAttribute("title") ?? "";
