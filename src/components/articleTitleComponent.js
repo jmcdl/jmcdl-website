@@ -22,9 +22,9 @@ articleTitleTemplate.innerHTML = `
   .date-text {
     font-size: var(--size-16px);
     font-weight: bold;
-    background: linear-gradient(140deg, #D2A8FF 12.09%, #F778BA 42.58%, #FF7B72 84.96%);
-   -webkit-background-clip:text;
-   -webkit-text-fill-color:rgba(0,0,0,0);
+    background: linear-gradient(140deg, var(--background-color) -10%, var(--primary-color) 10%);
+    color: transparent;
+    -webkit-background-clip: text;
   }
   
   .description-text {
