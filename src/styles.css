@@ -2,6 +2,7 @@
   --background-color: #22272e;
   --primary-color: #9cb9dd;
   --primary-color-light: #b4d5ff;
+  --blog-title-color: #fff;
 
   font-weight: 200;
 }
@@ -10,11 +11,13 @@
   --background-color: #fff;
   --primary-color: #031833ff;
   --primary-color-light: #062c5d;
+  --blog-title-color: #062c5d ;
 
   font-weight: 500;
 }
 
 html {
+  --date-text-gradient: linear-gradient(140deg, #22272e -10%, #9cb9dd 10%);
   --size-12px: 0.75rem;
   --size-14px: 0.875rem;
   --size-16px: 1rem;

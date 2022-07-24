@@ -8,11 +8,10 @@ articleTitleTemplate.innerHTML = `
   .title-container {
     padding-top: 32px;
     padding-bottom: 24px;
-    /*border-bottom: 1px solid;*/
   }
   
   .title-text {
-    color: white;
+    color: var(--blog-title-color);
     font-size: var(--size-28px);
     font-weight: bold;
     margin-bottom: 12px;
@@ -22,7 +21,7 @@ articleTitleTemplate.innerHTML = `
   .date-text {
     font-size: var(--size-16px);
     font-weight: bold;
-    background: linear-gradient(140deg, var(--background-color) -10%, var(--primary-color) 10%);
+    background: var(--date-text-gradient);
     color: transparent;
     -webkit-background-clip: text;
   }
