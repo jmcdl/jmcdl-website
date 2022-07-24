@@ -43,7 +43,7 @@ navbarTemplate.innerHTML = `
     left: 0;
     width: 100%;
     height: 0.1em;
-    background-color: var(--primary-color);
+    background-color: #9cb9dd;
     transition: opacity 300ms, transform 300ms;
     opacity 1;
     transform: scale(0);
