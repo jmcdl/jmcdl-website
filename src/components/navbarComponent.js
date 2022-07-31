@@ -123,23 +123,25 @@ class NavbarComponent extends HTMLElement {
 
   connectedCallback() {
     const toggleButton = this.shadowRoot.getElementById("theme-toggle")
-    toggleButton.addEventListener("click", this._onClick);
+    toggleButton.addEventListener("click", this.toggleColorMode);
   }
 
   disconnectedCallback() {
-    this.removeEventListener("click", this._onClick);
+    this.removeEventListener("click", this.toggleColorMode);
   }
 
-  _onClick(event) {
+  toggleColorMode(event) {
     const current = document.body.getAttribute("class");
     if (current === "dark") {
       document.body.setAttribute("class", "light");
       event.currentTarget.removeChild(event.currentTarget.firstElementChild)
       event.currentTarget.appendChild(moonIconTemplate.content.cloneNode(true))
+      window.localStorage.setItem("color-mode", "light")
     } else {
       document.body.setAttribute("class", "dark");
       event.currentTarget.removeChild(event.currentTarget.firstElementChild)
       event.currentTarget.appendChild(sunIconTemplate.content.cloneNode(true))
+      window.localStorage.setItem("color-mode", "dark")
     }
   }
 }
