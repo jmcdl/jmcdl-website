@@ -32,7 +32,9 @@ html,
 body {
   height: 100%;
   font-family: sans-serif;
+  color: #9cb9dd;
   color: var(--primary-color);
+  background-color: #22272e;
   background-color: var(--background-color);
   transition: color 0.5s ease, background-color 0.5s ease;
 }
