@@ -2,7 +2,7 @@ const navbarTemplate = document.createElement("template");
 navbarTemplate.innerHTML = `
 <style>
   .navbar {
-  background-color: #22272e;
+  background-color: var(--background-color);
   line-height: 3rem;
   font-size: 12px;
   font-weight: 200;
@@ -28,7 +28,7 @@ navbarTemplate.innerHTML = `
   }
   
   .nav-button {
-    color: #9cb9dd;
+    color: var(--primary-color);
     margin: 0 0.8rem;
     text-decoration: none;
     font-size: 16px;
@@ -44,7 +44,7 @@ navbarTemplate.innerHTML = `
     left: 0;
     width: 100%;
     height: 0.1em;
-    background-color: #9cb9dd;
+    background-color: var(--primary-color);
     transition: opacity 300ms, transform 300ms;
     opacity 1;
     transform: scale(0);
@@ -58,7 +58,7 @@ navbarTemplate.innerHTML = `
   }
   
   .toggle-button {
-    color: #9cb9dd;
+    color: var(--primary-color);
     display: flex;
     align-self: center;
     margin: 0;
